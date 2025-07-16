@@ -51,12 +51,12 @@ const Footer = () => {
               <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold">CaseWin</span>
+              <span className="text-xl font-bold">Consultory</span>
             </div>
             
             <p className="text-background/80 max-w-md leading-relaxed">
-              The AI-powered platform helping ambitious students win case competitions 
-              with confidence. Built for the next generation of business leaders.
+              The AI-powered platform helping ambitious students dominate case competitions 
+              with confidence. Built for the next generation of strategic thinkers.
             </p>
             
             <div className="flex gap-4">
@@ -98,7 +98,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="border-t border-background/20 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-background/60 text-sm">
-            © 2024 CaseWin. All rights reserved.
+            © 2024 Consultory. All rights reserved.
           </p>
           
           <div className="flex gap-6 text-sm">
