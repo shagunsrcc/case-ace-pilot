@@ -2,41 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Premium Case Competition Platform Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 99%;
+    --foreground: 240 10% 6%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 240 10% 6%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 240 10% 6%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary Brand Colors - Sharp Blue */
+    --primary: 223 84% 55%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 223 70% 85%;
+    --primary-dark: 223 84% 45%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm Accent */
+    --secondary: 280 50% 75%;
+    --secondary-foreground: 240 10% 6%;
+    --secondary-light: 280 50% 90%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Tones */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent Colors */
+    --accent: 45 93% 88%;
+    --accent-foreground: 240 10% 6%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 223 84% 55%;
 
-    --radius: 0.5rem;
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(223 84% 55%) 0%, hsl(280 50% 75%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(45 93% 88%) 0%, hsl(280 50% 90%) 100%);
+    --gradient-subtle: linear-gradient(135deg, hsl(220 14% 96%) 0%, hsl(0 0% 100%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(223 84% 95%) 0%, hsl(280 50% 95%) 50%, hsl(45 93% 95%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 40px -4px hsl(223 84% 55% / 0.1);
+    --shadow-medium: 0 8px 30px -6px hsl(223 84% 55% / 0.15);
+    --shadow-strong: 0 20px 50px -12px hsl(223 84% 55% / 0.25);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +120,19 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px);
+    background-size: 3rem 3rem;
   }
 }
