@@ -31,7 +31,15 @@ const features = [
   },
   {
     icon: Calendar,
-    title: "Competition Calendar",
+    title: "Competition Calendar",<a 
+  href="https://docs.google.com/spreadsheets/d/1_b_IwI9WyYyqkK4a2sxVGcWe-vTwNW-cfo4l-FIgu_E/edit?gid=580001184#gid=580001184"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-blue-600 underline mt-2 inline-block"
+>
+  View Full Competition Calendar
+</a>
+
     description: "Never miss a deadline with our comprehensive corporate case competition tracker.",
     color: "text-secondary"
   },
