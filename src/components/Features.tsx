@@ -1,12 +1,12 @@
-import {
-  Brain,
-  Calendar,
-  FileText,
-  MessageSquare,
-  Presentation,
-  TrendingUp,
-  Users2,
-  Zap
+import { 
+  Brain, 
+  Calendar, 
+  FileText, 
+  MessageSquare, 
+  Presentation, 
+  TrendingUp, 
+  Users2, 
+  Zap 
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -31,7 +31,15 @@ const features = [
   },
   {
     icon: Calendar,
-    title: "Competition Calendar",
+    title: "Competition Calendar",<a 
+  href="https://docs.google.com/spreadsheets/d/1_b_IwI9WyYyqkK4a2sxVGcWe-vTwNW-cfo4l-FIgu_E/edit?gid=580001184#gid=580001184"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-blue-600 underline mt-2 inline-block"
+>
+  View Full Competition Calendar
+</a>
+
     description: "Never miss a deadline with our comprehensive corporate case competition tracker.",
     color: "text-secondary"
   },
@@ -70,7 +78,7 @@ const Features = () => {
             <Zap className="w-4 h-4" />
             Everything you need to dominate
           </div>
-
+          
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Where{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
@@ -78,9 +86,9 @@ const Features = () => {
             </span>{" "}
             performance
           </h2>
-
+          
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From mock interviews to AI feedback, we've built the complete toolkit
+            From mock interviews to AI feedback, we've built the complete toolkit 
             that transforms ambitious students into case competition winners.
           </p>
         </div>
@@ -88,45 +96,21 @@ const Features = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => {
             const Icon = feature.icon;
-            const isCalendar = feature.title === "Competition Calendar";
-
             return (
-              <Card
-                key={index}
+              <Card 
+                key={index} 
                 className="group hover:shadow-medium transition-all duration-300 border-border/50 bg-card/80 backdrop-blur-sm animate-scale-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-secondary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {isCalendar ? (
-                      <a
-                        href="https://docs.google.com/spreadsheets/d/1_b_IwI9WyYyqkK4a2sxVGcWe-vTwNW-cfo4l-FIgu_E/edit?gid=580001184#gid=580001184"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Icon className={`w-6 h-6 ${feature.color}`} />
-                      </a>
-                    ) : (
-                      <Icon className={`w-6 h-6 ${feature.color}`} />
-                    )}
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-secondary flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <Icon className={`w-6 h-6 ${feature.color}`} />
                   </div>
-
-                  {isCalendar ? (
-                    <a
-                      href="https://docs.google.com/spreadsheets/d/1_b_IwI9WyYyqkK4a2sxVGcWe-vTwNW-cfo4l-FIgu_E/edit?gid=580001184#gid=580001184"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-lg font-semibold text-foreground block"
-                      style={{ textDecoration: "none" }}
-                    >
-                      {feature.title}
-                    </a>
-                  ) : (
-                    <h3 className="text-lg font-semibold">
-                      {feature.title}
-                    </h3>
-                  )}
-
+                  
+                  <h3 className="text-lg font-semibold">
+                    {feature.title}
+                  </h3>
+                  
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {feature.description}
                   </p>
