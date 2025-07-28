@@ -9,7 +9,6 @@ import {
   Zap
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const features = [
   {
@@ -63,26 +62,24 @@ const features = [
 ];
 
 const Features = () => {
-  useScrollAnimation();
-  
   return (
     <section className="py-24 bg-gradient-subtle">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 scroll-fade-in">
-          <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full text-sm font-medium text-primary mb-6 glow-accent scroll-scale-in">
-            <Zap className="w-4 h-4 accent-pop" />
+        <div className="text-center mb-16 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full text-sm font-medium text-primary mb-6">
+            <Zap className="w-4 h-4" />
             Everything you need to dominate
           </div>
 
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-high-contrast scroll-slide-left">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Where{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent glow-primary">
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
               prep meets
             </span>{" "}
             performance
           </h2>
 
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto scroll-slide-right">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             From mock interviews to AI feedback, we've built the complete toolkit
             that transforms ambitious students into case competition winners.
           </p>
@@ -96,21 +93,21 @@ const Features = () => {
             return (
               <Card
                 key={index}
-                className="group hover:shadow-medium transition-all duration-300 border-border/50 bg-card/80 backdrop-blur-sm scroll-scale-in glow-spotlight hover:glow-accent"
+                className="group hover:shadow-medium transition-all duration-300 border-border/50 bg-card/80 backdrop-blur-sm animate-scale-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-secondary flex items-center justify-center group-hover:scale-110 transition-transform duration-300 glow-primary">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-secondary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {isCalendar ? (
                       <a
                         href="https://docs.google.com/spreadsheets/d/1_b_IwI9WyYyqkK4a2sxVGcWe-vTwNW-cfo4l-FIgu_E/edit?gid=580001184#gid=580001184"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Icon className={`w-6 h-6 ${feature.color} accent-pop`} />
+                        <Icon className={`w-6 h-6 ${feature.color}`} />
                       </a>
                     ) : (
-                      <Icon className={`w-6 h-6 ${feature.color} accent-pop`} />
+                      <Icon className={`w-6 h-6 ${feature.color}`} />
                     )}
                   </div>
 
@@ -119,18 +116,18 @@ const Features = () => {
                       href="https://docs.google.com/spreadsheets/d/1_b_IwI9WyYyqkK4a2sxVGcWe-vTwNW-cfo4l-FIgu_E/edit?gid=580001184#gid=580001184"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-lg font-semibold text-foreground block text-high-contrast"
+                      className="text-lg font-semibold text-foreground block"
                       style={{ textDecoration: "none" }}
                     >
                       {feature.title}
                     </a>
                   ) : (
-                    <h3 className="text-lg font-semibold text-high-contrast">
+                    <h3 className="text-lg font-semibold">
                       {feature.title}
                     </h3>
                   )}
 
-                  <p className="text-muted-foreground text-sm leading-relaxed text-high-contrast">
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {feature.description}
                   </p>
                 </CardContent>
