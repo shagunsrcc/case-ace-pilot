@@ -9,7 +9,6 @@ import {
   Zap
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const features = [
   {
@@ -63,12 +62,10 @@ const features = [
 ];
 
 const Features = () => {
-  useScrollAnimation();
-  
   return (
     <section className="py-24 bg-gradient-subtle">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 scroll-fade-up" data-scroll-animate>
+        <div className="text-center mb-16 animate-fade-in-up">
           <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full text-sm font-medium text-primary mb-6">
             <Zap className="w-4 h-4" />
             Everything you need to dominate
@@ -96,8 +93,7 @@ const Features = () => {
             return (
               <Card
                 key={index}
-                className="group hover:shadow-medium hover:shadow-glow-red transition-all duration-300 border-border/50 bg-gradient-card backdrop-blur-sm scroll-scale"
-                data-scroll-animate
+                className="group hover:shadow-medium transition-all duration-300 border-border/50 bg-card/80 backdrop-blur-sm animate-scale-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="p-6 space-y-4">
