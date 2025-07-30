@@ -15,49 +15,37 @@ const features = [
     icon: Users2,
     title: "Mock Case Interviews",
     description: "Practice with matched partners and get real-time feedback on your performance.",
-    color: "text-primary"
+    color: "text-red-500"
   },
   {
     icon: Brain,
     title: "AI Case Deck Evaluator",
     description: "Upload your decks and get instant AI-powered feedback on structure and logic.",
-    color: "text-secondary"
+    color: "text-red-500"
   },
   {
     icon: FileText,
     title: "Curated Resource Bank",
     description: "Access frameworks, past winning decks, and cheat sheets from top competitions.",
-    color: "text-primary"
+    color: "text-red-500"
   },
   {
     icon: Calendar,
     title: "Competition Calendar",
     description: "Never miss a deadline with our comprehensive corporate case competition tracker.",
-    color: "text-secondary"
+    color: "text-red-500"
   },
   {
     icon: TrendingUp,
     title: "Trending Competitions",
     description: "Top 20 trending case competitions on Unstop, updated in real-time.",
-    color: "text-primary"
+    color: "text-red-500"
   },
   {
     icon: MessageSquare,
-    title: "Case Buddy AI",
-    description: "Your personal AI coach that gives feedback on structure, logic, and delivery.",
-    color: "text-secondary"
-  },
-  {
-    icon: Presentation,
-    title: "Mock Presentation Room",
-    description: "Timed, format-ready practice sessions that simulate real competition environments.",
-    color: "text-primary"
-  },
-  {
-    icon: Zap,
-    title: "Performance Analytics",
-    description: "Track your progress and identify areas for improvement with detailed insights.",
-    color: "text-secondary"
+    title: "Community Forum",
+    description: "Connect with fellow case competitors, share insights, and collaborate on solutions.",
+    color: "text-red-500"
   }
 ];
 
