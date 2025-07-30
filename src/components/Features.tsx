@@ -15,37 +15,43 @@ const features = [
     icon: Users2,
     title: "Mock Case Interviews",
     description: "Practice with matched partners and get real-time feedback on your performance.",
-    color: "text-red-500"
+    color: "text-red-800",
+    url: "https://lovable.dev/projects/af6d3da6-d644-4f83-bfe6-d345b8eb030c"
   },
   {
     icon: Brain,
     title: "AI Case Deck Evaluator",
     description: "Upload your decks and get instant AI-powered feedback on structure and logic.",
-    color: "text-red-500"
+    color: "text-red-800",
+    url: "https://lovable.dev/projects/9743a41c-9e80-4ae0-a1ba-281231bc3874"
   },
   {
     icon: FileText,
     title: "Curated Resource Bank",
     description: "Access frameworks, past winning decks, and cheat sheets from top competitions.",
-    color: "text-red-500"
+    color: "text-red-800",
+    url: "https://lovable.dev/projects/832473a4-2867-49e3-96e8-2a9ec7828306"
   },
   {
     icon: Calendar,
     title: "Competition Calendar",
     description: "Never miss a deadline with our comprehensive corporate case competition tracker.",
-    color: "text-red-500"
+    color: "text-red-800",
+    url: "https://lovable.dev/projects/3d555b76-446f-4276-815a-e1a0661d62fc?magic_link=mc_c75be235-b477-4391-b241-cb4d5bb95cab"
   },
   {
     icon: TrendingUp,
     title: "Trending Competitions",
     description: "Top 20 trending case competitions on Unstop, updated in real-time.",
-    color: "text-red-500"
+    color: "text-red-800",
+    url: "https://preview--trendace-dash.lovable.app/"
   },
   {
     icon: MessageSquare,
     title: "Community Forum",
     description: "Connect with fellow case competitors, share insights, and collaborate on solutions.",
-    color: "text-red-500"
+    color: "text-red-800",
+    url: "https://preview--crimson-talk-hive.lovable.app/"
   }
 ];
 
@@ -73,47 +79,29 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => {
             const Icon = feature.icon;
-            const isCalendar = feature.title === "Competition Calendar";
+
+            const handleCardClick = () => {
+              window.open(feature.url, '_blank', 'noopener,noreferrer');
+            };
 
             return (
               <Card
                 key={index}
-                className="group hover:shadow-medium transition-all duration-300 border-border/50 bg-card/80 backdrop-blur-sm animate-scale-in"
+                className="group hover:shadow-medium transition-all duration-300 border-border/50 bg-card/80 backdrop-blur-sm animate-scale-in cursor-pointer"
                 style={{ animationDelay: `${index * 100}ms` }}
+                onClick={handleCardClick}
               >
                 <CardContent className="p-6 space-y-4">
                   <div className="w-12 h-12 rounded-xl bg-gradient-secondary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {isCalendar ? (
-                      <a
-                        href="https://docs.google.com/spreadsheets/d/1_b_IwI9WyYyqkK4a2sxVGcWe-vTwNW-cfo4l-FIgu_E/edit?gid=580001184#gid=580001184"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Icon className={`w-6 h-6 ${feature.color}`} />
-                      </a>
-                    ) : (
-                      <Icon className={`w-6 h-6 ${feature.color}`} />
-                    )}
+                    <Icon className={`w-6 h-6 ${feature.color}`} />
                   </div>
 
-                  {isCalendar ? (
-                    <a
-                      href="https://docs.google.com/spreadsheets/d/1_b_IwI9WyYyqkK4a2sxVGcWe-vTwNW-cfo4l-FIgu_E/edit?gid=580001184#gid=580001184"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-lg font-semibold text-foreground block"
-                      style={{ textDecoration: "none" }}
-                    >
-                      {feature.title}
-                    </a>
-                  ) : (
-                    <h3 className="text-lg font-semibold">
-                      {feature.title}
-                    </h3>
-                  )}
+                  <h3 className="text-lg font-semibold">
+                    {feature.title}
+                  </h3>
 
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {feature.description}
