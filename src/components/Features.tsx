@@ -30,14 +30,14 @@ const features = [
     title: "Curated Resource Bank",
     description: "Access frameworks, past winning decks, and cheat sheets from top competitions.",
     color: "text-red-800",
-    url: "https://lovable.dev/projects/832473a4-2867-49e3-96e8-2a9ec7828306"
+    url: "https://preview--casebook-crafted-web.lovable.app/#"
   },
   {
     icon: Calendar,
     title: "Competition Calendar",
     description: "Never miss a deadline with our comprehensive corporate case competition tracker.",
     color: "text-red-800",
-    url: "https://lovable.dev/projects/3d555b76-446f-4276-815a-e1a0661d62fc?magic_link=mc_c75be235-b477-4391-b241-cb4d5bb95cab"
+    url: "https://preview--calendar-consultory.lovable.app/"
   },
   {
     icon: TrendingUp,
